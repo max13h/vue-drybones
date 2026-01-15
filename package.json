@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "type-check": "vue-tsc --build",
     "lint": "oxlint",
-    "lint:fix": "oxlint --fix",
+    "lint:fix": "oxlint --fix --max-warnings=0",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
     "prepare": "husky"

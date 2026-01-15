@@ -1,51 +1,51 @@
 :root {
-    --color-black: #000000;
-    --color-white: #ffffff;
-    --color-red: #fb2c36;
-    --color-orange: #ff6900;
-    --color-yellow: #efb100;
-    --color-green: #00c951;
-    --color-blue: #2b7fff;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-red: #fb2c36;
+  --color-orange: #ff6900;
+  --color-yellow: #efb100;
+  --color-green: #00c951;
+  --color-blue: #2b7fff;
 
-    --color-neutral-50: #fafafa;
-    --color-neutral-100: #f3f4f6;
-    --color-neutral-200: #e5e5e5;
-    --color-neutral-300: #d4d4d4;
-    --color-neutral-400: #a1a1a1;
-    --color-neutral-500: #737373;
-    --color-neutral-600: #525252;
-    --color-neutral-700: #404040;
-    --color-neutral-800: #262626;
-    --color-neutral-900: #171717;
-    --color-neutral-950: #0a0a0a;
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a1a1a1;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
 
-    /* ======================================== */
-    /* Colors */
-    --color-primary: var(--color-black);
-    --color-secondary: var(--color-neutral-700);
+  /* ======================================== */
+  /* Colors */
+  --color-primary: var(--color-black);
+  --color-secondary: var(--color-neutral-700);
 
-    --color-positive: var(--color-green);
-    --color-negative: var(--color-red);
-    --color-info: var(--color-blue);
-    --color-warning: var(--color-yellow);
+  --color-positive: var(--color-green);
+  --color-negative: var(--color-red);
+  --color-info: var(--color-blue);
+  --color-warning: var(--color-yellow);
 
-    --text-color: var(--color-black);
-    --text-color-dark: var(--color-white);
+  --text-color: var(--color-black);
+  --text-color-dark: var(--color-white);
 
-    /* Other */
-    --border-radius: 2rem;
-    --border-radius-pills: 100rem;
+  /* Other */
+  --border-radius: 2rem;
+  --border-radius-pills: 100rem;
 
-    --font-size-xs: 0.75rem;
-    --font-size-sm: 0.875rem;
-    --font-size-base: 1rem;
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 1.25rem;
-    --font-size-2xl: 1.5rem;
-    --font-size-3xl: 1.875rem;
-    --font-size-4xl: 2.25rem;
-    --font-size-5xl: 3rem;
-    --font-size-6xl: 3.75rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
 }
 
 /*
@@ -61,9 +61,9 @@ GIST: https://gist.github.com/mvllow/b2b38d2968c1b3b6a393556530a8f65f
 *,
 ::before,
 ::after {
-    box-sizing: border-box; /* 1 */
-    border-width: 0; /* 2 */
-    border-style: solid; /* 2 */
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
 }
 
 /*
@@ -74,25 +74,25 @@ GIST: https://gist.github.com/mvllow/b2b38d2968c1b3b6a393556530a8f65f
 */
 
 html {
-    line-height: 1.5; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-    -moz-tab-size: 4; /* 3 */
-    tab-size: 4; /* 3 */
-    font-family:
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        'Segoe UI',
-        Roboto,
-        'Helvetica Neue',
-        Arial,
-        'Noto Sans',
-        sans-serif,
-        'Apple Color Emoji',
-        'Segoe UI Emoji',
-        'Segoe UI Symbol',
-        'Noto Color Emoji'; /* 4 */
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  tab-size: 4; /* 3 */
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji"; /* 4 */
 }
 
 /*
@@ -101,9 +101,9 @@ html {
 */
 
 body {
-    margin: 0; /* 1 */
-    line-height: inherit; /* 2 */
-    font-size: inherit;
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+  font-size: inherit;
 }
 
 /*
@@ -113,9 +113,9 @@ body {
 */
 
 hr {
-    height: 0; /* 1 */
-    color: inherit; /* 2 */
-    border-top-width: 1px; /* 3 */
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
 }
 
 /*
@@ -128,9 +128,9 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
 }
 
 /*
@@ -138,8 +138,8 @@ Reset links to optimize for opt-in styling instead of opt-out.
 */
 
 a {
-    color: inherit;
-    text-decoration: inherit;
+  color: inherit;
+  text-decoration: inherit;
 }
 
 /*
@@ -149,9 +149,9 @@ a {
 */
 
 table {
-    text-indent: 0; /* 1 */
-    border-color: inherit; /* 2 */
-    border-collapse: collapse; /* 3 */
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
 }
 
 /*
@@ -165,13 +165,13 @@ input,
 optgroup,
 select,
 textarea {
-    font-family: inherit; /* 1 */
-    font-size: 100%; /* 1 */
-    font-weight: inherit; /* 1 */
-    line-height: inherit; /* 1 */
-    color: inherit; /* 1 */
-    margin: 0; /* 2 */
-    padding: 0; /* 3 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
 }
 
 /*
@@ -180,7 +180,7 @@ Remove the inheritance of text transform in Edge and Firefox.
 
 button,
 select {
-    text-transform: none;
+  text-transform: none;
 }
 
 /*
@@ -189,12 +189,12 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-    -webkit-appearance: button; /* 1 */
-    background-color: transparent; /* 2 */
-    background-image: none; /* 2 */
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
 }
 
 /*
@@ -214,7 +214,7 @@ hr,
 figure,
 p,
 pre {
-    margin: 0;
+  margin: 0;
 }
 
 /*
@@ -222,7 +222,7 @@ Prevent resizing textareas horizontally by default.
 */
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 /*
@@ -230,8 +230,8 @@ Set the default cursor for buttons.
 */
 
 button,
-[role='button'] {
-    cursor: pointer;
+[role="button"] {
+  cursor: pointer;
 }
 
 /*
@@ -239,7 +239,7 @@ Make sure disabled buttons don't get the pointer cursor.
 */
 
 :disabled {
-    cursor: default;
+  cursor: default;
 }
 
 /*
@@ -256,8 +256,8 @@ audio,
 iframe,
 embed,
 object {
-    display: block; /* 1 */
-    vertical-align: middle; /* 2 */
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
 }
 
 /*
@@ -265,18 +265,18 @@ Make elements with the HTML hidden attribute stay hidden by default.
 */
 
 [hidden] {
-    display: none;
+  display: none;
 }
 
 .computed-at {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: var(--font-size-xs);
-    color: var(--color-neutral-500);
-    font-style: italic;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-500);
+  font-style: italic;
+  justify-content: flex-end;
 }
 .computed-at i {
-    font-size: 0.75rem;
+  font-size: 0.75rem;
 }

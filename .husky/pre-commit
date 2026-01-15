@@ -1,31 +1,87 @@
 #!/bin/sh
+set -e
 
-echo "🚑️ Running pre-commit checks..."
+# ---------------------------
+# Helpers
+# ---------------------------
+
+fail() {
+  echo "🛑 $1"
+  exit 1
+}
+
+command_exists() {
+  command -v "$1" >/dev/null 2>&1
+}
+
+# Content-only change detection (ignores chmod, CRLF noise)
+has_content_changes() {
+  ! git diff --quiet
+}
+
+print_changes() {
+  git --no-pager diff --stat
+}
+
+# ---------------------------
+# Environment checks
+# ---------------------------
+
+if ! command_exists pnpm; then
+  fail "pnpm not found in PATH. Aborting commit."
+fi
+
+echo "🚑 Running pre-commit checks..."
+
+# ---------------------------
+# Type check (no fixes, must be clean)
+# ---------------------------
 
 echo ""
-echo "🩺️ Running type check..."
-if ! pnpm type-check; then
-  echo "🐛 Type check failed. Aborting commit."
-  exit 1
-fi
+echo "🩺 Running type check..."
+pnpm run type-check || fail "Type check failed."
 echo "✅ Type check passed."
-echo ""
+
+# ---------------------------
+# Lint (with autofix)
+# ---------------------------
 
 echo ""
-echo "🚨 Running lint..."
-if ! pnpm lint:fix --max-warnings=0; then
-  echo "🐛 Lint failed. Aborting commit."
-  exit 1
+echo "🚨 Running lint (with fixes)..."
+pnpm run lint:fix || fail "Lint failed."
+
+if has_content_changes; then
+  echo ""
+  echo "✏️ Lint applied fixes to the following files:"
+  print_changes
+  echo ""
+  fail "Please review and stage the changes, then re-run the commit."
 fi
+
 echo "✅ Lint passed."
-echo ""
+
+# ---------------------------
+# Format (with autofix)
+# ---------------------------
 
 echo ""
-echo "🔍 Running format..."
-pnpm format
+echo "🎨 Running formatter..."
+pnpm run format
+
+if has_content_changes; then
+  echo ""
+  echo "✏️ Formatter applied changes to the following files:"
+  print_changes
+  echo ""
+  fail "Please review and stage the changes, then re-run the commit."
+fi
+
 echo "✅ Format passed."
-echo ""
+
+# ---------------------------
+# Done
+# ---------------------------
 
 echo ""
-echo "🚑️ Pre-commit checks passed. Committing..."
+echo "🚑 Pre-commit checks passed. Proceeding with commit."
 exit 0
